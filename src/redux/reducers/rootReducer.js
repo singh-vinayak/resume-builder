@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import documentReducer from './documentReducer';
-import contactReducer from './documentReducer';
-import educationReducer from './documentReducer';
+import contactReducer from './contactReducer';
+import educationReducer from './educationReducer';
 
 const rootReducer = combineReducers({
     document: documentReducer,

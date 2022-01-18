@@ -31,7 +31,7 @@ function GettingStarted(props) {
               <div key={index} className="template-card rounded-border">
                 <i
                   className={
-                    value == "demo-value" ? "selected fa fa-check" : "hide"
+                    value === "demo-value" ? "selected fa fa-check" : "hide"
                   }
                 ></i>
                 <img className="" src={"/images/" + value + ".svg"} />
