@@ -17,6 +17,7 @@ import AboutUs from "./components/presentation/aboutUs";
 import Contacts from "./components/presentation/contact";
 import Education from "./components/presentation/education";
 import Finalize from "./components/presentation/finalizePage";
+import PrivateRoute from "./components/presentation/PrivateRoute";
 
 function App() {
   return (
@@ -25,15 +26,22 @@ function App() {
         <Header></Header>
 
         <Switch>
-          <Route path="/education" element={<Education />} />
-          <Route path="/contact" element={<Contacts />} />
-          <Route path="/getting-started" element={<GettingStarted />} />
-          <Route path="/resume-templates" element={<GettingStarted />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route exact path="/education" element={<PrivateRoute />}>
+            <Route path="/education" element={<Education />} />
+          </Route>
+          <Route exact path="/contact" element={<PrivateRoute />}>
+            <Route path="/contact" element={<Contacts />} />
+          </Route>
+          <Route exact path="/resume-templates" element={<PrivateRoute />}>
+            <Route path="/resume-templates" element={<GettingStarted />} />
+          </Route>
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/finalize" element={<Finalize />} />
+          <Route exact path="/finalize" element={<PrivateRoute />}>
+            <Route exact path="/finalize" element={<Finalize />} />
+          </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<LandingPage />} />
         </Switch>
         <Footer></Footer>
       </div>
