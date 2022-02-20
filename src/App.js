@@ -36,6 +36,9 @@ function App() {
           <Route exact path="/resume-templates" element={<PrivateRoute />}>
             <Route path="/resume-templates" element={<GettingStarted />} />
           </Route>
+          <Route exact path="/getting-started" element={<PrivateRoute />}>
+            <Route path="/getting-started" element={<GettingStarted />} />
+          </Route>
           <Route path="/about-us" element={<AboutUs />} />
           <Route exact path="/finalize" element={<PrivateRoute />}>
             <Route exact path="/finalize" element={<Finalize />} />
