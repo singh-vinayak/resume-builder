@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import {isLoaded, isEmpty} from 'react-redux-firebase';
 import * as authActions from '../../redux/actions/authActions'
+import logo from "../../static/images/resumeLogo.png";
 
 function LoggesOut(props) {
   return (
@@ -32,7 +33,7 @@ const Header = (props) => {
   <header className="header">
   <nav className="nav">
       <a href="/" className="holder-logo">
-        <img className='logo' src={''}></img>
+        <img className='logo' src={logo} alt=""></img>
       </a> 
         <div className="header-links full-height">
 
