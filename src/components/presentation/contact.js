@@ -64,12 +64,6 @@ function Contact(props) {
                             <div className="error"></div>
                         </div>
 
-                        <div className="input-group full"><label>Professional Summary</label>
-                            <div className="effect"><input type="text" name={fieldCd.ProfSummary}   value={getFieldData(fieldCd.ProfSummary)}  onChange={onchange}/><span></span>
-                            </div>
-                            <div className="error"></div>
-                        </div>
-
                         <div className="input-group"><label>Email</label>
                             <div className="effect"><input type="text"  name={fieldCd.Email}  value={getFieldData(fieldCd.Email)}  onChange={onchange} /><span></span>
                             </div>

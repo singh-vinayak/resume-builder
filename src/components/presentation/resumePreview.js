@@ -20,15 +20,9 @@ function ResumePreview(props){
             <div className={props.skinCd + " resume-preview "}>
                 <div className={'name-section'}>
                     <p className={'center contact-name text-upper' }> {rvContact(fieldCd.FirstName,' ')  + rvContact(fieldCd.LastName)}  </p>
-                    <p className={'center address'}>{rvContact(fieldCd.City,', ') + rvContact(fieldCd.State,', ') +  rvContact(fieldCd.Country,', ') + rvContact(fieldCd.ZipCode,', ')}</p>
+                    <p className={'center address'}>{rvContact(fieldCd.City,', ') + rvContact(fieldCd.State,', ') +  rvContact(fieldCd.Country,', ') + rvContact(fieldCd.ZipCode,'')}</p>
                     <p className={'center'}>{rvContact(fieldCd.Email ) }</p>
                     <p className={'center'}>{rvContact(fieldCd.Phone) } </p>
-                </div>
-
-                <div className={'profSummSection text-upper'}>                   
-                    <p className="heading bold">PROFESSIONAL SUMMARY</p>
-                     <div className={'divider'}></div>
-                     <p>{rvContact(fieldCd.ProfSummary)}</p>
                 </div>
 
                 <div className={'educationSection text-upper'}>                   
